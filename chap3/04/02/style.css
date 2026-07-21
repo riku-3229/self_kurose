@@ -1,0 +1,31 @@
+/* id */
+#title{
+    color:red;
+    font-size: 24px;
+
+}
+/* クラス */
+.note{
+    color: blue;
+    font-size: 16px;
+}
+
+.important{
+    font-size: 24px;
+}
+
+.btn{
+    color:green;
+    font-size: 18px;
+}
+/* .note{ 
+    color: orange;
+} */
+
+/* #title{
+    color:green;
+} */
+
+body{
+    color: violet;
+}

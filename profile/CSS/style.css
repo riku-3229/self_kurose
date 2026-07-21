@@ -1,0 +1,176 @@
+@charset "UTF-8";
+/* 
+bg: #FFFFFF 
+main: #383E45
+nav: #24292E 
+text size: 14.4px
+見出し: 32px
+name: 16px
+自転車タイトル: 16px
+自転車　text: 14.4px
+著作権: 8px
+
+font-family: "Noto Sans JP"
+
+コンテンツ幅
+最大: 960px
+画面幅の92%
+(左右に4%の余白)
+
+font: Noto Sans JP
+*/
+
+/* CSS変数（カスタムプロパティ） */
+:root{
+    /* color */
+    --color-bg:#FFFFFF;
+    --color-text-main:#383E45;
+    --color-text-nav:#24292E;
+    /* font-size */
+    --font-size-base:0.9rem;
+    --font-size-md:1rem;
+    --font-size-lg:2rem;
+    --font-size-sm:0.5rem;
+}
+
+
+/* 全体 */
+
+/* 余白をリセット */
+/* 全体セレクタ */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 画像サイズ */
+img{
+    max-width: 100%;
+}
+
+/* サイトの基本設定 */
+body{
+   font-size:var(--font-size-base) ;
+   font-family: "Noto Sans JP", sans-serif;
+   line-height: 1.5;
+   background-color: var(--color-bg);
+}
+
+a{
+    color: var(--color-text-main);
+    text-decoration: none;
+}
+/* コンテンツの横幅の設定 */
+.container{
+    max-width: 960px;
+    width: 92%;
+    /*background-color: red;*/
+    /* 画面の左右中央に配置 */
+    margin: 0 auto;
+}
+
+/* 個々のパーツ */
+
+/* ヘッダーの設定 */
+nav ul{
+    display: flex;
+    list-style-type: none;
+    gap: 30px;
+
+}
+
+.header-inner{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+h1{
+    width: 120px;
+    line-height: 0;
+}
+
+header{
+    /* 上下10px,左右9 */
+    padding: 10px 0;
+
+}
+
+/* ナビゲーションの文字の色を[--color-text-nav]に */
+
+header nav li a{
+    color: var(--color-text-nav);
+}
+
+/* メインビジュアル */
+.mainvisual{
+    height: 600px;
+
+}
+/* セクション見出し */
+h2{
+    font-size: var(--font-size-lg);
+    /* normal:400 / bold:700 */
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 60px;
+    text-decoration: underline;
+    text-underline-offset: 8px;
+}
+
+/* aboutセクション */
+.about-img{
+    /* 横幅100px, 高さ100px */
+    width: 100px;
+    height: 100px;
+    /* 正方形の要素に問いして角丸50％＝＞正円 */
+    border-radius: 50%;
+
+    display: block;
+
+    margin: 0 auto 16px;
+}
+
+.about-name{
+    text-transform: uppercase;
+    margin-bottom: 16px;
+}
+section#about{
+    padding: 80px 0 50px;
+}
+
+/* bicycleのセクション */
+.bicycle-list{
+    display: flex;
+    /* Flexboxの主軸を指定する */
+    flex-direction: column;
+    gap: 30px;
+    /* 箇条書きの・を消す */
+    list-style-type: none;
+}
+
+/*  */
+.bicycle-list img,
+.bicycle-list p{
+    text-align: center;
+}
+
+.bicycle-list h3{
+    font-size: var(--font-size-md);
+    text-align: center;
+}
+
+section#bicycle{
+    padding: 50px 0 100px;
+}
+
+/* フッダー */
+footer{
+    padding: 10px 0;
+    text-align: center;
+    font-size: var(--font-size-sm);
+}
+
+
+/* メディアクエリ */

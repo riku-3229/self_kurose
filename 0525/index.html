@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>フォームの練習</h1>
+    <form action="contact.php" method="post">
+        <!-- 名前 -->
+        <p>
+            <label>名前: 
+                <input type="text" name="username" required placeholder="山田 太郎"> 
+            </label>
+        </p>
+
+        <!-- パスワード -->
+        <p>
+            <label>パスワード: 
+                <input type="password" name="password" required 
+                       minlength="6" maxlength="20" 
+                       placeholder="6文字以上20文字以下で入力">
+            </label>
+        </p>
+
+        <!-- 電話番号 -->
+        <p>
+            <label>電話番号: 
+                <input type="tel" name="phone" required 
+                       placeholder="09012345678" pattern="\d{10,11}">
+            </label>
+        </p>
+
+        <!-- 年齢 -->
+        <p>
+            <label>年齢: 
+                <input type="number" name="age" min="0" max="120">
+            </label>
+        </p>
+
+        <!-- 誕生日 -->
+        <p>
+            <label>誕生日: 
+                <input type="date" name="birthday">
+            </label>
+        </p>
+
+        <!-- 予約時刻（時間のみ選択） -->
+        <p>
+            <label>予約時刻: 
+                <input type="time" name="reservation_time">
+            </label>
+        </p>
+
+        <!-- 開始日時（日付と時間の両方を選択） -->
+        <p>
+            <label>開始日時: 
+                <input type="datetime-local" name="start_datetime">
+            </label>
+        </p>
+
+        <!-- 性別 -->
+        <p>
+            性別:
+            <label><input type="radio" name="gender" value="male"> 男性</label>
+            <label><input type="radio" name="gender" value="female"> 女性</label>
+            <label><input type="radio" name="gender" value="other"> その他</label>
+        </p>
+
+       
+        <!-- 趣味（複数選択可） -->
+        <p>
+        趣味（複数選択可）:
+        <label><input type="checkbox" name="hobby" value="music"> 音楽</label>
+        <label><input type="checkbox" name="hobby" value="sports"> スポーツ</label>
+        <label><input type="checkbox" name="hobby" value="reading"> 読書</label>
+        </p>
+
+        <!-- 出身地（プルダウン選択） -->
+        <p>
+         <label>出身地:
+                <select name="prefecture">
+                    <option value="">選択してください</option>
+                    <option value="hokkaido">北海道</option>
+                    <option value="tokyo">東京都</option>
+                    <option value="osaka">大阪府</option>
+                    <option value="fukuoka"selected>福岡県</option>
+                 <!-- 必要に応じて他の都道府県を追加 -->
+                </select>
+            </label>
+        </p>
+        <p>
+            <label>自己紹介：<br>
+                <textarea name="bio" rows="4" cols="40" placeholder="簡単な自己紹介">
+
+                </textarea>
+                
+            </label>
+        </p>
+        <p>
+            <label>プロフィール画像:<input type="file"name="photo"></label>
+        </p>
+        <p>
+            <label>好きな色:
+                <input type="color" name="favcolor" value="red">
+            </label>
+        </p>
+        <p>
+            <label>ホームページ: <input></label>
+        </p>
+        <p>
+            <button type="submit">送信する</button>
+        </p>
+    </form>
+</body>
+</html>
