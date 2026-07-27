@@ -1,5 +1,6 @@
 @charset "UTF-8";
 
+
 /* =========================
    全体
 ========================= */
@@ -15,6 +16,7 @@ body {
     font-family: sans-serif;
     font-size: 16px;
     line-height: 1.7;
+
     color: #eef2f5;
     background-color: #7a828a;
 }
@@ -46,14 +48,10 @@ a {
 }
 
 .brand {
-    margin: 0 0 20px;
+    margin-bottom: 20px;
+
     color: #ffffff;
     font-size: 2rem;
-}
-
-.lead {
-    margin: 0 0 20px;
-    color: #ffffff;
 }
 
 
@@ -65,6 +63,7 @@ a {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+
     list-style-type: none;
 }
 
@@ -81,6 +80,7 @@ a {
 .container {
     width: calc(100% - 40px);
     max-width: 700px;
+
     margin: 40px auto;
 }
 
@@ -92,29 +92,34 @@ a {
 .section-row {
     margin-bottom: 40px;
     padding-bottom: 20px;
+
     text-align: left;
 }
 
 .section-title {
     position: relative;
-    margin: 0 0 12px;
+
+    margin-bottom: 12px;
     padding-left: 12px;
+
     color: #eef2f5;
     font-size: 1.25rem;
 }
 
 .section-title::before {
     content: "";
+
     position: absolute;
     top: 5px;
     left: 0;
+
     width: 4px;
     height: 20px;
+
     background-color: #ffffff;
 }
 
 .section-text {
-    margin: 0;
     color: #ffffff;
 }
 
@@ -133,36 +138,39 @@ a {
 ========================= */
 
 .book-item {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    column-gap: 30px;
-
-    width: 100%;
-    margin-bottom: 50px;
+    margin-bottom: 60px;
 }
 
-/* 本の名前を画像と文章の上に置く */
 .book-name {
-    flex-basis: 100%;
+    margin-bottom: 15px;
 
-    margin: 0 0 15px;
     color: #ffffff;
     font-size: 24px;
     line-height: 1.4;
 }
 
+
+/* 画像と文章を横並びにする */
+.book-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+}
+
+
 /* 左側：画像 */
 .book-img-box {
-    flex: 0 0 180px;
     width: 180px;
+    flex-shrink: 0;
 }
 
 .book-thumb {
     display: block;
+
     width: 180px;
     height: auto;
 }
+
 
 /* 右側：文章 */
 .book-text-box {
@@ -170,23 +178,18 @@ a {
     min-width: 0;
 }
 
-/*
-以前のinline-blockは使わない。
-HTMLにclass="ib"が残っていても影響させない。
-*/
-.ib {
-    display: block;
-}
-
 .book-description {
-    margin: 0 0 16px;
+    margin-bottom: 16px;
+
     color: #eef2f5;
     font-size: 1rem;
     line-height: 1.8;
 }
 
-.book-text-box h3 {
-    margin: 20px 0 8px;
+.reason-title {
+    margin-top: 20px;
+    margin-bottom: 8px;
+
     color: #ffffff;
     font-size: 1.1rem;
 }
@@ -199,23 +202,25 @@ HTMLにclass="ib"が残っていても影響させない。
 .site-footer {
     margin-top: 60px;
     padding: 40px 20px;
+
     background-color: #3a4146;
 }
 
 .footer-container {
     max-width: 700px;
     margin: 0 auto;
+
     text-align: left;
 }
 
 .footer-title {
-    margin: 0 0 10px;
+    margin-bottom: 10px;
+
     color: #4682b4;
     font-size: 1.25rem;
 }
 
 .site-footer-small {
-    margin: 0;
     color: #eef2f5;
 }
 
@@ -224,15 +229,28 @@ HTMLにclass="ib"が残っていても影響させない。
    スマートフォン
 ========================= */
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
 
-    .book-item {
-        display: block;
+    .site-header {
+        padding: 30px 20px;
+    }
+
+    .brand {
+        font-size: 1.7rem;
+    }
+
+    .container {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    .book-content {
+        flex-direction: column;
+        gap: 20px;
     }
 
     .book-img-box {
         width: 150px;
-        margin-bottom: 20px;
     }
 
     .book-thumb {
@@ -242,41 +260,4 @@ HTMLにclass="ib"が残っていても影響させない。
     .book-text-box {
         width: 100%;
     }
-}
-
-/* 読み込み確認用 */
-body {
-    border: 10px solid red !important;
-}
-
-.book-item {
-    display: flex !important;
-    flex-wrap: wrap !important;
-    align-items: flex-start !important;
-    column-gap: 30px !important;
-}
-
-.book-name {
-    flex-basis: 100% !important;
-}
-
-.book-img-box {
-    display: block !important;
-    width: 180px !important;
-    flex: 0 0 180px !important;
-}
-
-.book-thumb {
-    display: block !important;
-    width: 180px !important;
-    max-width: 180px !important;
-    height: auto !important;
-}
-
-.book-text-box {
-    display: block !important;
-    width: auto !important;
-    flex: 1 !important;
-    min-width: 0 !important;
-    margin-left: 0 !important;
 }

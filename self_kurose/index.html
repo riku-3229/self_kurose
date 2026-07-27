@@ -4,125 +4,161 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>自己紹介</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
     <header class="site-header">
-        <div class="container header-inner">
+        <div class="header-container">
+
             <h1 class="brand">黒瀬 陸</h1>
 
             <nav>
                 <ul class="site-nav">
-                    <li><a href="#hobby">趣味</a></li>
-                    <li><a href="#genre">好きなジャンル</a></li>
-                    <li><a href="#books">自分を表す本</a></li>
+                    <li>
+                        <a href="#hobby" class="nav-link">趣味</a>
+                    </li>
+
+                    <li>
+                        <a href="#genre" class="nav-link">好きなジャンル</a>
+                    </li>
+
+                    <li>
+                        <a href="#books" class="nav-link">自分を表す本</a>
+                    </li>
                 </ul>
             </nav>
+
         </div>
     </header>
 
-    <main>
 
-        <section id="profile">
-            <div class="container">
-                <h2>人物像</h2>
+    <main class="container">
 
-                <p>
-                    自分とは違う視点や考え方、世界の見方に興味がある。
-                </p>
-            </div>
+        <section class="section-row">
+            <h2 class="section-title">人物像</h2>
+
+            <p class="section-text">
+                自分とは違う視点や考え方、世界の見方に興味がある。
+            </p>
         </section>
 
-        <section id="hobby">
-            <div class="container">
-                <h2>趣味</h2>
 
-                <ul class="section-list">
-                    <li>読書</li>
-                </ul>
-            </div>
+        <section class="section-row" id="hobby">
+            <h2 class="section-title">趣味</h2>
+
+            <ul class="section-list">
+                <li>読書</li>
+            </ul>
         </section>
 
-        <section id="genre">
-            <div class="container">
-                <h2>好きなジャンル</h2>
 
-                <ul class="section-list">
-                    <li>ミステリ</li>
-                    <li>SF</li>
-                    <li>ホラー</li>
-                    <li>その他のジャンルも読む</li>
-                </ul>
-            </div>
+        <section class="section-row" id="genre">
+            <h2 class="section-title">好きなジャンル</h2>
+
+            <ul class="section-list">
+                <li>ミステリ</li>
+                <li>SF</li>
+                <li>ホラー</li>
+                <li>その他のジャンルも読む</li>
+            </ul>
         </section>
 
-        <section id="books">
-            <div class="container">
-                <h2>自分を表す本</h2>
 
-                <ul class="book-list">
+        <section class="section-row" id="books">
+            <h2 class="section-title">自分を表す本</h2>
 
-                    <li class="book-item">
-                        <h3>古典部シリーズ<br>氷菓</h3>
 
-                        <div class="book-content">
-                            <img
-                                src="images/hyouka.jpg"
-                                alt="氷菓の表紙"
-                                class="book-thumb"
-                            >
+            <!-- 1冊目 -->
+            <article class="book-item">
 
-                            <div class="book-text">
-                                <p>
-                                    青春と日常の謎を通して、人が同じ出来事をどう違って見ているのかを描いた作品。
-                                </p>
+                <h3 class="book-name">
+                    古典部シリーズ<br>
+                    氷菓
+                </h3>
 
-                                <h4>好きな理由</h4>
+                <div class="book-content">
 
-                                <p>
-                                    私は謎そのものよりも、「なぜそう解釈したのか」「なぜそう行動したのか」を考えるのが好き。この作品は、人間の認識のズレを丁寧に描いていて面白い。
-                                </p>
-                            </div>
-                        </div>
-                    </li>
+                    <div class="book-img-box">
+                        <img
+                            class="book-thumb"
+                            src="images/hyouka.jpg"
+                            alt="氷菓の表紙"
+                        >
+                    </div>
 
-                    <li class="book-item">
-                        <h3>S&amp;Mシリーズ<br>すべてがFになる</h3>
+                    <div class="book-text-box">
 
-                        <div class="book-content">
-                            <img
-                                src="images/f.jpg"
-                                alt="すべてがFになるの表紙"
-                                class="book-thumb"
-                            >
+                        <p class="book-description">
+                            青春と日常の謎を通して、人が同じ出来事をどう違って見ているのかを描いた作品。
+                        </p>
 
-                            <div class="book-text">
-                                <p>
-                                    孤島で起きた密室殺人事件を描くミステリ。
-                                </p>
+                        <h4 class="reason-title">好きな理由</h4>
 
-                                <h4>好きな理由</h4>
+                        <p class="book-description">
+                            私は謎そのものよりも、「なぜそう解釈したのか」「なぜそう行動したのか」を考えるのが好き。この作品は、人間の認識のズレを丁寧に描いていて面白い。
+                        </p>
 
-                                <p>
-                                    登場人物たちが当たり前を当たり前として扱わないところが好き。事件の真相よりも、「人は何を前提として世界を見ているのか」を考えさせられる。
-                                </p>
-                            </div>
-                        </div>
-                    </li>
+                    </div>
 
-                </ul>
-            </div>
+                </div>
+            </article>
+
+
+            <!-- 2冊目 -->
+            <article class="book-item">
+
+                <h3 class="book-name">
+                    S&amp;Mシリーズ<br>
+                    すべてがFになる
+                </h3>
+
+                <div class="book-content">
+
+                    <div class="book-img-box">
+                        <img
+                            class="book-thumb"
+                            src="images/f.jpg"
+                            alt="すべてがFになるの表紙"
+                        >
+                    </div>
+
+                    <div class="book-text-box">
+
+                        <p class="book-description">
+                            孤島で起きた密室殺人事件を描くミステリ。
+                        </p>
+
+                        <h4 class="reason-title">好きな理由</h4>
+
+                        <p class="book-description">
+                            登場人物たちが当たり前を当たり前として扱わないところが好き。事件の真相よりも、「人は何を前提として世界を見ているのか」を考えさせられる。
+                        </p>
+
+                    </div>
+
+                </div>
+            </article>
+
         </section>
 
     </main>
 
-    <footer>
-        <div class="container">
-            <h2>一言</h2>
-            <p>おすすめの本があれば教えてください。ジャンルは問いません。</p>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+
+            <h2 class="footer-title">一言</h2>
+
+            <p class="site-footer-small">
+                おすすめの本があれば教えてください。<br>
+                ジャンルは問いません。
+            </p>
+
         </div>
     </footer>
 
