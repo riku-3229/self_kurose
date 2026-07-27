@@ -41,7 +41,6 @@ a {
 
 .site-header {
     padding: 40px 20px;
-
     background-color: #3a4146;
 }
 
@@ -143,6 +142,10 @@ a {
 ========================= */
 
 .book-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+
     margin-bottom: 60px;
 }
 
@@ -150,27 +153,23 @@ a {
     margin-bottom: 0;
 }
 
+
+/* 左側：タイトルと画像 */
+.book-left {
+    width: 180px;
+    flex: 0 0 180px;
+}
+
 .book-name {
-    margin: 0 0 15px;
+    margin: 0 0 16px;
 
     color: #ffffff;
     font-size: 24px;
     line-height: 1.4;
 }
 
-
-/* 画像と文章を横並びにする */
-.book-content {
-    display: flex;
-    align-items: flex-start;
-    gap: 30px;
-}
-
-
-/* 左側：画像 */
 .book-img-box {
     width: 180px;
-    flex: 0 0 180px;
 }
 
 .book-thumb {
@@ -185,43 +184,26 @@ a {
 .book-text-box {
     flex: 1;
     min-width: 0;
-
-    margin: 0;
-    padding: 0;
-
-    border: none;
 }
 
-
-/* あらすじ・好きな理由の見出し */
 .book-text-title {
     margin: 0 0 8px;
-    padding: 0;
 
     color: #ffffff;
     font-size: 1.1rem;
     line-height: 1.4;
-
-    border: none;
 }
 
-
-/* 2つ目の見出しだけ上に余白を付ける */
 .book-description + .book-text-title {
     margin-top: 20px;
 }
 
-
-/* あらすじ・好きな理由の本文 */
 .book-description {
     margin: 0;
-    padding: 0;
 
     color: #eef2f5;
     font-size: 1rem;
     line-height: 1.8;
-
-    border: none;
 }
 
 
@@ -282,16 +264,17 @@ a {
         margin-bottom: 30px;
     }
 
-    .book-content {
+    .book-item {
         flex-direction: column;
         gap: 20px;
     }
 
-    .book-img-box {
+    .book-left {
         width: 150px;
-        flex-basis: 150px;
+        flex-basis: auto;
     }
 
+    .book-img-box,
     .book-thumb {
         width: 150px;
     }
