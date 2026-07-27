@@ -243,3 +243,40 @@ HTMLにclass="ib"が残っていても影響させない。
         width: 100%;
     }
 }
+
+/* 読み込み確認用 */
+body {
+    border: 10px solid red !important;
+}
+
+.book-item {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    align-items: flex-start !important;
+    column-gap: 30px !important;
+}
+
+.book-name {
+    flex-basis: 100% !important;
+}
+
+.book-img-box {
+    display: block !important;
+    width: 180px !important;
+    flex: 0 0 180px !important;
+}
+
+.book-thumb {
+    display: block !important;
+    width: 180px !important;
+    max-width: 180px !important;
+    height: auto !important;
+}
+
+.book-text-box {
+    display: block !important;
+    width: auto !important;
+    flex: 1 !important;
+    min-width: 0 !important;
+    margin-left: 0 !important;
+}
