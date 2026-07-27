@@ -1,163 +1,171 @@
-html, body {
+@charset "UTF-8";
+
+/*
+背景色: #7a828a
+濃い背景色: #3a4146
+文字色: #eef2f5
+リンク色: #4682b4
+
+コンテンツ幅
+最大: 960px
+画面幅: 92%
+*/
+
+
+/* 全体 */
+
+/* 余白とサイズ計算を統一 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* サイトの基本設定 */
+body {
     font-family: sans-serif;
     font-size: 16px;
+    line-height: 1.7;
     color: #eef2f5;
-    background-color:#7a828a; 
-    margin: 0;
+    background-color: #7a828a;
 }
 
+/* 画像が親要素からはみ出さないようにする */
+img {
+    max-width: 100%;
+}
+
+/* リンク */
+a {
+    color: #4682b4;
+    text-decoration: none;
+}
+
+/* コンテンツの横幅 */
+.container {
+    max-width: 960px;
+    width: 92%;
+    margin: 0 auto;
+}
+
+
+/* ヘッダー */
 
 .site-header {
-    background-color: #3a4146; 
-    padding: 40px 20px;
+    background-color: #3a4146;
+    padding: 30px 0;
 }
 
-.header-container {
-    max-width: 700px;
-    margin: 0 auto;
-    text-align: left; 
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .brand {
-    margin: 0 0 10px 0;
     font-size: 2rem;
 }
 
-.lead {
-    margin: 0 0 20px 0;
-    color: #ffffff;
-}
-
-
 .site-nav {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+    display: flex;
+    gap: 30px;
+    list-style-type: none;
 }
 
-.site-nav li {
-    display: inline-block;
-    margin-right: 20px; 
-}
-
-.nav-link {
-    text-decoration: none;
-    color: #4682b4;
+.site-nav a {
     font-weight: bold;
 }
 
-.container {
-    max-width: 700px; 
-    margin: 40px auto;
-    padding: 0 20px;
+
+/* セクション */
+
+section {
+    padding: 50px 0;
 }
 
-.section-row {
+section h2 {
+    font-size: 2rem;
+    text-align: center;
     margin-bottom: 40px;
-    padding-bottom: 20px;
-    text-align: left; 
-    
-}
-
-.section-title {
-    font-size: 1.25rem;
-    color: #eef2f5;
-    margin: 0 0 12px 0;
-    position: relative;
-    padding-left: 12px;
-}
-
-.section-title::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 4px;
-    width: 4px;
-    height: 18px;
-    background-color: #ffffff;
-}
-
-.section-text {
-    margin: 0;
-    line-height: 1.7;
-    color: #ffffff;
+    text-decoration: underline;
+    text-underline-offset: 8px;
 }
 
 .section-list {
-    margin: 0;
     padding-left: 20px;
-    line-height: 1.7;
-    color: #ffffff;
 }
 
 
-.site-footer {
-    background-color:#3a4146;
-    padding: 40px 20px;
-    margin-top: 60px;
+/* 本の紹介 */
+
+.book-list {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    list-style-type: none;
 }
 
-.footer-container {
-    max-width: 700px;
-    margin: 0 auto;
-    text-align: left;
+.book-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
 }
 
-.footer-title {
-    margin: 0 0 10px 0;
+.book-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 5%;
+}
+
+.book-img {
+    width: 35%;
+}
+
+.book-text {
+    width: 60%;
+}
+
+.book-text h4 {
+    font-size: 1.1rem;
+    margin: 20px 0 8px;
+}
+
+
+/* フッター */
+
+footer {
+    background-color: #3a4146;
+    padding: 30px 0;
+}
+
+footer h2 {
     font-size: 1.25rem;
+    margin-bottom: 10px;
     color: #4682b4;
 }
 
-.site-footer-small {
-    margin: 0;
-    color: #eef2f5;
-}
 
-.book-item {
-    margin-bottom: 40px;
-    width: 100%; 
-}
+/* メディアクエリ */
 
+@media screen and (max-width: 600px) {
 
-.ib {
-    display: inline-block;
-    vertical-align: top; 
-    box-sizing: border-box; 
-}
+    .header-inner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
 
-/* 本の名前 */
-.book-name {
-    color: #ffffff;
-    font-size: 1.15rem;
-    margin: 0 0 15px 0;
-    font-size: 24px;
-}
+    .site-nav {
+        flex-wrap: wrap;
+        gap: 10px 20px;
+    }
 
-/* 左側：画像エリア */
-.book-img-box {
-    width: 35%; 
-}
+    .book-content {
+        flex-direction: column;
+        gap: 20px;
+    }
 
-/* 本の画像*/
-.book-thumb {
-    width: 100%;
-    height: auto;
-    display: block;
-    color: #eef2f5; 
-    font-size: 0.9rem;
-}
-
-/* 右側：文章エリア */
-.book-text-box {
-    width: 60%;        
-    padding-left: 5%; 
-}
-
-/* 横に打つ文章の見た目 */
-.book-description {
-    color: #eef2f5;      
-    font-size: 1rem;
-    line-height: 1.8;    
-    margin: 0;          
+    .book-img,
+    .book-text {
+        width: 100%;
+    }
 }
