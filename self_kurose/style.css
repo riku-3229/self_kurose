@@ -1,27 +1,16 @@
 @charset "UTF-8";
 
-/*
-背景色: #7a828a
-濃い背景色: #3a4146
-文字色: #eef2f5
-リンク色: #4682b4
+/* =========================
+   全体設定
+========================= */
 
-コンテンツ幅
-最大: 960px
-画面幅: 92%
-*/
-
-
-/* 全体 */
-
-/* 余白とサイズ計算を統一 */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* サイトの基本設定 */
+html,
 body {
     font-family: sans-serif;
     font-size: 16px;
@@ -30,142 +19,249 @@ body {
     background-color: #7a828a;
 }
 
-/* 画像が親要素からはみ出さないようにする */
 img {
     max-width: 100%;
+    height: auto;
 }
 
-/* リンク */
 a {
     color: #4682b4;
     text-decoration: none;
 }
 
-/* コンテンツの横幅 */
-.container {
-    max-width: 960px;
-    width: 92%;
-    margin: 0 auto;
-}
 
-
-/* ヘッダー */
+/* =========================
+   ヘッダー
+========================= */
 
 .site-header {
+    padding: 40px 20px;
     background-color: #3a4146;
-    padding: 30px 0;
 }
 
-.header-inner {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.header-container {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: left;
 }
 
 .brand {
+    margin-bottom: 20px;
     font-size: 2rem;
+    color: #ffffff;
 }
+
+.lead {
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+
+/* =========================
+   ナビゲーション
+========================= */
 
 .site-nav {
     display: flex;
-    gap: 30px;
+    flex-wrap: wrap;
+    gap: 20px;
+
     list-style-type: none;
 }
 
-.site-nav a {
+.nav-link {
+    color: #4682b4;
     font-weight: bold;
 }
 
 
-/* セクション */
+/* =========================
+   メインコンテンツ
+========================= */
 
-section {
-    padding: 50px 0;
+.container {
+    max-width: 700px;
+    width: calc(100% - 40px);
+    margin: 40px auto;
 }
 
-section h2 {
-    font-size: 2rem;
-    text-align: center;
+
+/* =========================
+   セクション
+========================= */
+
+.section-row {
     margin-bottom: 40px;
-    text-decoration: underline;
-    text-underline-offset: 8px;
+    padding-bottom: 20px;
+    text-align: left;
+}
+
+.section-title {
+    position: relative;
+
+    margin-bottom: 12px;
+    padding-left: 12px;
+
+    font-size: 1.25rem;
+    color: #eef2f5;
+}
+
+.section-title::before {
+    content: "";
+
+    position: absolute;
+    top: 5px;
+    left: 0;
+
+    width: 4px;
+    height: 20px;
+
+    background-color: #ffffff;
+}
+
+.section-text {
+    color: #ffffff;
 }
 
 .section-list {
     padding-left: 20px;
+    color: #ffffff;
 }
 
 
-/* 本の紹介 */
-
-.book-list {
-    display: flex;
-    flex-direction: column;
-    gap: 60px;
-    list-style-type: none;
+/* リストの項目同士の間隔 */
+.section-list li {
+    margin-bottom: 4px;
 }
 
-.book-item h3 {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
+
+/* =========================
+   本の紹介
+========================= */
+
+.book-item {
+    width: 100%;
+    margin-bottom: 50px;
+    overflow: hidden;
 }
 
-.book-content {
-    display: flex;
-    align-items: flex-start;
-    gap: 5%;
+/* 本の名前 */
+.book-name {
+    margin-bottom: 15px;
+
+    color: #ffffff;
+    font-size: 24px;
+    line-height: 1.4;
 }
 
-.book-img {
-    width: 35%;
+/*
+画像と文章を横並びにするための共通設定
+*/
+.ib {
+    display: inline-block;
+    vertical-align: top;
 }
 
-.book-text {
-    width: 60%;
+/* 左側：画像エリア */
+.book-img-box {
+    width: 180px;
 }
 
-.book-text h4 {
+/* 本の画像 */
+.book-thumb {
+    display: block;
+
+    width: 180px;
+    max-width: 100%;
+    height: auto;
+}
+
+/* 右側：文章エリア */
+.book-text-box {
+    width: calc(100% - 210px);
+    margin-left: 25px;
+}
+
+/* 作品説明・好きな理由 */
+.book-description {
+    margin: 0;
+
+    color: #eef2f5;
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+/* 好きな理由の見出し */
+.book-text-box h3 {
+    margin-top: 20px;
+    margin-bottom: 8px;
+
+    color: #ffffff;
     font-size: 1.1rem;
-    margin: 20px 0 8px;
 }
 
 
-/* フッター */
+/* =========================
+   フッター
+========================= */
 
-footer {
+.site-footer {
+    margin-top: 60px;
+    padding: 40px 20px;
+
     background-color: #3a4146;
-    padding: 30px 0;
 }
 
-footer h2 {
-    font-size: 1.25rem;
+.footer-container {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.footer-title {
     margin-bottom: 10px;
+
     color: #4682b4;
+    font-size: 1.25rem;
+}
+
+.site-footer-small {
+    color: #eef2f5;
 }
 
 
-/* メディアクエリ */
+/* =========================
+   スマートフォン
+========================= */
 
 @media screen and (max-width: 600px) {
 
-    .header-inner {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 20px;
+    .site-header {
+        padding: 30px 20px;
     }
 
-    .site-nav {
-        flex-wrap: wrap;
-        gap: 10px 20px;
+    .brand {
+        font-size: 1.7rem;
     }
 
-    .book-content {
-        flex-direction: column;
-        gap: 20px;
+    .container {
+        margin-top: 30px;
+        margin-bottom: 30px;
     }
 
-    .book-img,
-    .book-text {
+    .book-img-box {
+        display: block;
+        width: 160px;
+        margin-bottom: 20px;
+    }
+
+    .book-thumb {
+        width: 160px;
+    }
+
+    .book-text-box {
+        display: block;
         width: 100%;
+        margin-left: 0;
     }
 }
